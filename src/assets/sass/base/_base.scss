@@ -1,0 +1,50 @@
+html {
+  // scroll-behavior: smooth;
+  box-sizing: border-box;
+  height: 100%;
+}
+
+body {
+  height: 100%;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+button {
+  box-sizing: border-box;
+  cursor: pointer;
+  &:focus {
+    outline: 0;
+  }
+}
+
+.preload * {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+  transition: none !important;
+}

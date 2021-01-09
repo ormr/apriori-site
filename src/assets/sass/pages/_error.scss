@@ -1,0 +1,45 @@
+.error {
+  position: relative;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin: 0 auto;
+  text-align: center;
+  max-width: 670px;
+
+  &__title {
+    text-transform: uppercase;
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    font-size: 18px;
+    line-height: 36px;
+    padding-bottom: 80px;
+  }
+
+  &__link {
+    padding-bottom: 155px;
+    a {
+      font-size: 12px;
+      font-weight: bold;
+      color: $blue-beta;
+      text-transform: uppercase;
+    }
+  }
+
+  &__search {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.background-number {
+  z-index: -1;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%);
+  font-weight: bold;
+  font-size: 500px;
+  color: #f2f2f5;
+  position: absolute;
+}

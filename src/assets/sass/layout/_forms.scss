@@ -1,0 +1,81 @@
+// inputs
+
+// default-field
+
+.default-form-field {
+  width: 100%;
+  max-width: 356px;
+  background-color: #ffffff;
+  border-radius: 10px;
+}
+
+.default-field {
+  position: relative;
+  padding: 26px 0;
+  background-color: #ffffff;
+  border: 2px solid #c7c7c7;
+  border-radius: 5px;
+
+  label,
+  input {
+    transition: 0.25s ease-in-out;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    padding-left: 15px;
+  }
+
+  label {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    color: $gray-beta;
+    transform-origin: top left;
+  }
+
+  input {
+    border: none;
+
+    &:focus,
+    &:invalid {
+      + label {
+        transform: scale(0.8) translateY(-0.7rem);
+      }
+    }
+  }
+}
+
+.search-form-field {
+  @extend .default-form-field;
+}
+
+.search-field {
+  @extend .default-field;
+
+  &:before {
+    content: '';
+    position: absolute;
+    right: 20px;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    background: url('/src/assets/images/svg/search-icon.svg') center / contain
+      no-repeat;
+  }
+}
+
+.default-textarea {
+  color: $gray-beta;
+  max-width: 790px;
+  min-height: 80px;
+  width: 100%;
+  height: 100%;
+  border: 2px solid #c7c7cf;
+  border-radius: 4px;
+  padding: 18px 20px;
+  resize: vertical;
+}

@@ -1,0 +1,148 @@
+.contact-us {
+  &__header {
+    background-color: $gray-omega;
+    height: 144px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    padding: 120px 0;
+  }
+}
+
+.contact-us-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+
+  &__type-image {
+    background-color: $gray-omega;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      fill: $gray-beta;
+    }
+  }
+
+  &__info {
+    padding-top: 40px;
+    font-weight: 500;
+    max-width: 230px;
+  }
+}
+
+.contact-us-bottom {
+  padding-top: 80px;
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
+}
+
+.contact-us-list {
+  padding-bottom: 50px;
+  &__title {
+    padding: 50px 0;
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 55px;
+    margin-bottom: 40px;
+    max-width: 270px;
+
+    &:last-child {
+      margin-bottom: 0 !important;
+    }
+
+    &:before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0;
+      transform: translateY(-50%);
+      width: 24px;
+      height: 24px;
+    }
+
+    &.contact-us-list__item_address {
+      &:before {
+        background: url('/src/assets/images/svg/address.svg') center/contain
+          no-repeat;
+      }
+    }
+    &.contact-us-list__item_mail {
+      &:before {
+        background: url('/src/assets/images/svg/mail.svg') center/contain
+          no-repeat;
+      }
+    }
+    &.contact-us-list__item_phone {
+      &:before {
+        background: url('/src/assets/images/svg/phone.svg') center/contain
+          no-repeat;
+      }
+    }
+  }
+}
+
+.contact-us-form {
+  border-radius: 5px;
+  padding: 50px 10px;
+  background-color: $gray-omega;
+  max-width: 472px;
+
+  &__title {
+    text-align: center;
+    padding-bottom: 50px;
+  }
+
+  &__body {
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  &__input {
+    margin-bottom: 14px;
+  }
+
+  &__textarea {
+    margin-bottom: 14px;
+  }
+
+  &__button {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  &__check {
+    display: flex;
+    input {
+      margin-right: 15px;
+    }
+  }
+
+  &__text {
+    font-size: 14px;
+  }
+
+  &__link {
+    color: $primary-beta;
+  }
+}

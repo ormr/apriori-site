@@ -1,0 +1,74 @@
+.news-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 5px;
+  background-color: $gray-beta;
+  color: #ffffff;
+  max-width: 550px;
+  height: 285px;
+
+  &-inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__description {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+    padding: 0px 15px 70px;
+  }
+
+  &__info {
+    color: #c0c0c0;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  &__title {
+    padding-top: 40px;
+    margin: 0;
+  }
+
+  &.news-item_big {
+    max-width: 550px;
+    height: 600px;
+    margin-bottom: 30px;
+
+    .news-item-description {
+      padding-bottom: 105px;
+    }
+  }
+
+  &.news-item_nightcity-bg {
+    background: url('/src/assets/images/night-city.jpg') center / cover
+      no-repeat;
+  }
+  &.news-item_payment-bg {
+    background: url('/src/assets/images/payment-by-cart.jpg') center / cover
+      no-repeat;
+  }
+  &.news-item_computer-bg {
+    background: url('/src/assets/images/working-at-the-computer.jpg') center /
+      cover no-repeat;
+  }
+  &.news-item_customer-bg {
+    background: url('/src/assets/images/customer.jpg') center / cover no-repeat;
+  }
+  &.news-item_shop-bg {
+    background: url('/src/assets/images/shop.jpg') center / cover no-repeat;
+  }
+  &.news-item_todo-bg {
+    background: url('/src/assets/images/todo.jpg') center / cover no-repeat;
+  }
+  &.news-item_lamps-bg {
+    background: url('/src/assets/images/lamps.jpg') center / cover no-repeat;
+  }
+
+  &:hover {
+    text-decoration: none;
+  }
+}

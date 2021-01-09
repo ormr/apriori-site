@@ -1,0 +1,109 @@
+.footer {
+  padding-top: 90px;
+
+  &-top {
+    padding-bottom: 20px;
+  }
+
+  &__title {
+    color: $gray-alpha;
+    font-size: 12px;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding-bottom: 40px;
+  }
+
+  .footer-list {
+    &__item {
+      padding-bottom: 22px;
+    }
+    &__link {
+      color: $gray-beta;
+    }
+  }
+
+  .footer-form {
+    &__title {
+      color: $gray-alpha;
+      font-size: 12px;
+      font-weight: bold;
+      text-transform: uppercase;
+      padding-bottom: 40px;
+    }
+
+    &__field {
+      position: relative;
+
+      input {
+        padding-right: 165px;
+      }
+    }
+
+    &__btn {
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+      right: 3px;
+    }
+  }
+
+  &-bottom {
+    border-top: 2px solid $gray-omega;
+    padding: 40px 0;
+
+    &__copyright {
+      height: 100%;
+      display: flex;
+      align-items: center;
+    }
+
+    &__social-media {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    &__social-media-link {
+      transition: 0.3s;
+      margin-left: 10px;
+      background-color: $gray-omega;
+      height: 48px;
+      width: 48px;
+      border-radius: 50%;
+      position: relative;
+
+      &:hover {
+        background-color: $gray-gamma;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 24px;
+        height: 24px;
+      }
+
+      &.footer-bottom__social-media-link_facebook {
+        &:before {
+          background: url('/src/assets/images/svg/facebook-color.svg') center /
+            contain no-repeat;
+        }
+      }
+      &.footer-bottom__social-media-link_twitter {
+        &:before {
+          background: url('/src/assets/images/svg/twitter-color.svg') center /
+            contain no-repeat;
+        }
+      }
+      &.footer-bottom__social-media-link_instagram {
+        &:before {
+          background: url('/src/assets/images/svg/instagram-color.svg') center /
+            contain no-repeat;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,158 @@
+@mixin button(
+  $background-color,
+  $font-color,
+  $padding-horizontal,
+  $padding-vertical,
+  $border-size: 0,
+  $border-color: transparent
+) {
+  font-size: 14px;
+  max-width: 160px;
+  width: 100%;
+  background-color: $background-color;
+  color: $font-color;
+  padding: $padding-horizontal 0;
+  border-width: $border-size;
+  border-style: solid;
+  border-radius: 5px;
+  border-color: $border-color;
+}
+
+@mixin outline-button($background-color, $font-color, $border-color) {
+  transition: 0.3s;
+  background-color: $background-color;
+  color: $font-color;
+  border-color: $border-color;
+}
+
+.big-filled-primary-btn {
+  @include button($primary-gamma, #ffffff, 23px, 48px, 2px, $primary-gamma);
+  &:hover {
+    @include outline-button(#fff, $primary-gamma, $primary-gamma);
+  }
+}
+
+.medium-filled-primary-btn {
+  @include button($primary-gamma, #ffffff, 17px, 48px, 2px, $primary-gamma);
+  &:hover {
+    @include outline-button(#fff, $primary-gamma, $primary-gamma);
+  }
+}
+
+.small-filled-primary-btn {
+  @include button($primary-gamma, #ffffff, 12px, 48px, 2px, $primary-gamma);
+  &:hover {
+    @include outline-button(#fff, $primary-beta, $primary-gamma);
+  }
+}
+
+.big-filled-blue-btn {
+  @include button($blue-gamma, #ffffff, 23px, 48px, 2px, $blue-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-gamma, $blue-gamma);
+  }
+}
+
+.medium-filled-blue-btn {
+  @include button($blue-gamma, #ffffff, 17px, 48px, 2px, $blue-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-gamma, $blue-gamma);
+  }
+}
+
+.small-filled-blue-btn {
+  @include button($blue-gamma, #ffffff, 10px, 48px, 2px, $blue-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-gamma, $blue-gamma);
+  }
+}
+
+.big-filled-red-btn {
+  @include button($red-beta, #ffffff, 23px, 48px, 2px, $red-beta);
+  &:hover {
+    @include outline-button(#fff, $red-beta, $red-beta);
+  }
+}
+
+.medium-filled-red-btn {
+  @include button($red-beta, #ffffff, 17px, 48px, 2px, $red-beta);
+  &:hover {
+    @include outline-button(#fff, $red-beta, $red-beta);
+  }
+}
+
+.small-filled-red-btn {
+  @include button($red-beta, #ffffff, 10px, 48px, 2px, $red-beta);
+  &:hover {
+    @include outline-button(#fff, $red-beta, $red-beta);
+  }
+}
+
+// Orange
+
+.big-filled-orange-btn {
+  @include button($orange-gamma, #ffffff, 23px, 48px, 2px, $orange-gamma);
+  &:hover {
+    @include outline-button(#fff, $orange-gamma, $orange-gamma);
+  }
+}
+
+.medium-filled-orange-btn {
+  @include button($orange-gamma, #ffffff, 17px, 48px, 2px, $orange-gamma);
+  &:hover {
+    @include outline-button(#fff, $orange-gamma, $orange-gamma);
+  }
+}
+
+.small-filled-orange-btn {
+  @include button($orange-gamma, #ffffff, 10px, 48px, 2px, $orange-gamma);
+  &:hover {
+    @include outline-button(#fff, $orange-gamma, $orange-gamma);
+  }
+}
+
+// Gray
+
+.big-filled-gray-btn {
+  @include button($gray-beta, #ffffff, 23px, 48px, 2px, $gray-beta);
+  &:hover {
+    @include outline-button(#fff, $gray-beta, $gray-beta);
+  }
+}
+
+.medium-filled-gray-btn {
+  @include button($gray-beta, #ffffff, 17px, 48px, 2px, $gray-beta);
+  &:hover {
+    @include outline-button(#fff, $gray-beta, $gray-beta);
+  }
+}
+
+.small-filled-gray-btn {
+  @include button($gray-beta, #ffffff, 10px, 48px, 2px, $gray-beta);
+  &:hover {
+    @include outline-button(#fff, $gray-beta, $gray-beta);
+  }
+}
+
+// Light
+
+.big-filled-light-gray-btn {
+  @include button($gray-gamma, $blue-alpha, 23px, 48px, 2px, $gray-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-alpha, $gray-gamma);
+  }
+}
+
+.medium-filled-light-gray-btn {
+  @include button($gray-gamma, $blue-alpha, 17px, 48px, 2px, $gray-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-alpha, $gray-gamma);
+  }
+}
+
+.small-filled-light-gray-btn {
+  @include button($gray-gamma, $blue-alpha, 10px, 48px, 2px, $gray-gamma);
+  &:hover {
+    @include outline-button(#fff, $blue-alpha, $gray-gamma);
+  }
+}

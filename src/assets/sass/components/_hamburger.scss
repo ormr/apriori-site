@@ -1,0 +1,173 @@
+.toggle-button {
+  z-index: 11;
+  position: absolute;
+  top: -29px;
+  right: 20px;
+  display: none;
+  background-color: transparent;
+  border: 0;
+}
+
+.toggle-icon {
+  width: 50px;
+  height: 28px;
+  position: relative;
+  cursor: pointer;
+
+  .line {
+    position: absolute;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    background-color: #fff;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 50%;
+    }
+
+    &:nth-child(3) {
+      top: 100%;
+    }
+  }
+
+  &.active {
+    .line {
+      &:nth-child(1) {
+        animation: firstLineStart 0.7s ease-in-out;
+        top: 50%;
+        transform: rotate(45deg);
+      }
+      &:nth-child(2) {
+        animation: middleLineStart 0.7s ease-in-out;
+        transform: scale(0, 0);
+      }
+      &:nth-child(3) {
+        animation: lastLineStart 0.7s ease-in-out;
+        top: 50%;
+        transform: rotate(135deg);
+      }
+    }
+  }
+  &.end {
+    .line {
+      &:nth-child(1) {
+        animation: firstLineEnd 0.7s ease-in-out;
+        top: 0;
+      }
+      &:nth-child(2) {
+        animation: middleLineEnd 0.7s ease-in-out;
+        top: 50%;
+      }
+      &:nth-child(3) {
+        animation: lastLineEnd 0.7s ease-in-out;
+        top: 100%;
+      }
+    }
+  }
+}
+
+@keyframes firstLineStart {
+  0% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(45deg);
+  }
+}
+
+@keyframes middleLineStart {
+  0% {
+    transform: scale(1, 1);
+    display: block;
+  }
+  50% {
+    transform: scale(0, 0.5);
+    display: block;
+  }
+  100% {
+    transform: scale(0, 0);
+    display: none;
+  }
+}
+
+@keyframes lastLineStart {
+  0% {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotate(0deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(135deg);
+  }
+}
+
+@keyframes firstLineEnd {
+  0% {
+    top: 50%;
+    transform: rotate(45deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotate(0deg);
+  }
+  75% {
+    top: 0;
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+@keyframes middleLineEnd {
+  0% {
+    transform: scale(0, 0);
+    display: none;
+  }
+  50% {
+    transform: scale(0, 0.5);
+    display: block;
+  }
+  100% {
+    transform: scale(1, 1);
+    display: block;
+  }
+}
+
+@keyframes lastLineEnd {
+  0% {
+    top: 50%;
+    transform: rotate(135deg);
+  }
+  50% {
+    top: 50%;
+    transform: rotate(0deg);
+  }
+  75% {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+  100% {
+    top: 100%;
+    transform: rotate(0deg);
+  }
+}
