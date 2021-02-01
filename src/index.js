@@ -23,3 +23,21 @@ faqBlock.addEventListener('click', (e) => {
   const answerBlock = button.parentNode.parentNode.children[1];
   showAnswer(icon, questionBlock, answerBlock);
 });
+
+const emailInput = document.querySelector('#email');
+
+const sliceLabelForInput = (e) => {
+  const labelEl = e.target.parentNode.children[1];
+  labelEl.classList.add('default-field__label_focused');
+};
+
+const unsliceLabelForInput = (e) => {
+  if (!e.target.value) {
+    const labelEl = e.target.parentNode.children[1];
+    labelEl.classList.remove('default-field__label_focused');
+  }
+};
+
+emailInput.addEventListener('focus', sliceLabelForInput);
+
+emailInput.addEventListener('blur', unsliceLabelForInput);

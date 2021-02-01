@@ -61,6 +61,12 @@
       &.nav-menu_shown {
         right: 0;
       }
+
+      &.nav-menu_light.nav-menu_shown {
+        .nav-menu__link {
+          color: #fff;
+        }
+      }
     }
   }
 

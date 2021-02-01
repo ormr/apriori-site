@@ -35,6 +35,12 @@
     }
   }
 
+  &.toggle-icon_green {
+    .line {
+      background-color: $primary-gamma;
+    }
+  }
+
   &.active {
     .line {
       &:nth-child(1) {

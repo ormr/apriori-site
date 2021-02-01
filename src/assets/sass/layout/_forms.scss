@@ -16,6 +16,12 @@
   border: 2px solid #c7c7c7;
   border-radius: 5px;
 
+  &__label {
+    &.default-field__label_focused {
+      transform: scale(0.8) translateY(-0.7rem);
+    }
+  }
+
   label,
   input {
     transition: 0.25s ease-in-out;
@@ -40,12 +46,11 @@
   input {
     border: none;
 
-    &:focus,
-    &:invalid {
-      + label {
-        transform: scale(0.8) translateY(-0.7rem);
-      }
-    }
+    // &:focus ~ label,
+    // &:not(:focus):valid ~ label,
+    // &:not(:focus):invalid ~ label {
+    //   transform: scale(0.8) translateY(-0.7rem);
+    // }
   }
 }
 
